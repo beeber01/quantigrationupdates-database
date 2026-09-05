@@ -1,0 +1,35 @@
+┌───────────────┐
+│   CUSTOMERS   │
+├───────────────┤
+│ PK CustomerID │
+│ FirstName     │
+│ LastName      │
+│ Address       │
+│ City          │
+│ State         │
+│ ZipCode       │
+│ Telephone     │
+└───────┬───────┘
+        │
+        │ CustomerID
+        ▼
+┌───────────────┐
+│    ORDERS     │
+├───────────────┤
+│ PK OrderID    │
+│ FK CustomerID │
+│ SKU           │
+│ Description   │
+└───────┬───────┘
+        │
+        │ OrderID
+        ▼
+┌───────────────┐
+│      RMA      │
+├───────────────┤
+│ PK RMAID      │
+│ FK OrderID    │
+│ Step          │
+│ Status        │
+│ Reason        │
+└───────────────┘
